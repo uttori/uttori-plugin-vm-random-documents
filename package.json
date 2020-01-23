@@ -1,6 +1,6 @@
 {
   "name": "uttori-plugin-vm-random-documents",
-  "version": "1.0.1",
+  "version": "1.0.2-pre",
   "description": "A plugin to add random documents to the view model.",
   "author": "Matthew Callis <matthew.callis@gmail.com>",
   "contributors": [],
