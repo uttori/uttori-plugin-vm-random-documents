@@ -24,7 +24,7 @@ npm install --save uttori-plugin-vm-random-documents
   },
 
   // Key to use in the view model
-  key: 'recentDocuments',
+  key: 'randomDocuments',
 
   // Number of documents to return.
   limit: 10,
