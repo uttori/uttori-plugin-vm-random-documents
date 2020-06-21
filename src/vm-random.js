@@ -89,9 +89,6 @@ class ViewModelRandomDocuments {
    * @param {Function} context.hooks.on - An event registration function.
    * @example <caption>ViewModelRandomDocuments.register(context)</caption>
    * const context = {
-   *   hooks: {
-   *     on: (event, callback) => { ... },
-   *   },
    *   config: {
    *     [ViewModelRandomDocuments.configKey]: {
    *       ...,
@@ -100,6 +97,9 @@ class ViewModelRandomDocuments {
    *         validateConfig: ['validate-config'],
    *       },
    *     },
+   *   },
+   *   hooks: {
+   *     on: (event, callback) => { ... },
    *   },
    * };
    * ViewModelRandomDocuments.register(context);
@@ -163,7 +163,7 @@ class ViewModelRandomDocuments {
     const not_in = `"${ignore_slugs.join('", "')}"`;
     const query = `SELECT * FROM documents WHERE slug NOT_IN (${not_in}) ORDER BY RANDOM LIMIT ${limit}`;
     try {
-      results = await context.hooks.fetch('storage-query', query);
+      [results] = await context.hooks.fetch('storage-query', query);
     } catch (error) {
       /* istanbul ignore next */
       debug('Error:', error);

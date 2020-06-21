@@ -111,9 +111,6 @@ Register the plugin with a provided set of events on a provided Hook system.
 **Example** *(ViewModelRandomDocuments.register(context))*  
 ```js
 const context = {
-  hooks: {
-    on: (event, callback) => { ... },
-  },
   config: {
     [ViewModelRandomDocuments.configKey]: {
       ...,
@@ -122,6 +119,9 @@ const context = {
         validateConfig: ['validate-config'],
       },
     },
+  },
+  hooks: {
+    on: (event, callback) => { ... },
   },
 };
 ViewModelRandomDocuments.register(context);

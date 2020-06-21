@@ -42,9 +42,6 @@ declare class ViewModelRandomDocuments {
      * @example
      * <caption>ViewModelRandomDocuments.register(context)</caption>
      * const context = {
-     *   hooks: {
-     *     on: (event, callback) => { ... },
-     *   },
      *   config: {
      *     [ViewModelRandomDocuments.configKey]: {
      *       ...,
@@ -53,6 +50,9 @@ declare class ViewModelRandomDocuments {
      *         validateConfig: ['validate-config'],
      *       },
      *     },
+     *   },
+     *   hooks: {
+     *     on: (event, callback) => { ... },
      *   },
      * };
      * ViewModelRandomDocuments.register(context);
