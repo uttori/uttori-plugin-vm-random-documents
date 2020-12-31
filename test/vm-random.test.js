@@ -43,7 +43,7 @@ test('ViewModelRandomDocuments.register(context): errors without event dispatche
 
 test('ViewModelRandomDocuments.register(context): errors without events', (t) => {
   t.throws(() => {
-    ViewModelRandomDocuments.register({ hooks: { on: () => {} }, config: { [ViewModelRandomDocuments.configKey]: { } } });
+    ViewModelRandomDocuments.register({ hooks: { on: () => {} }, config: { [ViewModelRandomDocuments.configKey]: {} } });
   }, { message: 'Missing events to listen to for in \'config.events\'.' });
 });
 

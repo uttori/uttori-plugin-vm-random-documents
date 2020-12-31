@@ -1,6 +1,6 @@
 [![view on npm](https://img.shields.io/npm/v/@uttori/plugin-vm-random-documents.svg)](https://www.npmjs.com/package/@uttori/plugin-vm-random-documents)
 [![npm module downloads](https://img.shields.io/npm/dt/@uttori/plugin-vm-random-documents.svg)](https://www.npmjs.com/package/@uttori/plugin-vm-random-documents)
-[![Build Status](https://travis-ci.org/uttori/uttori-plugin-vm-random-documents.svg?branch=master)](https://travis-ci.org/uttori/uttori-plugin-vm-random-documents)
+[![Build Status](https://travis-ci.com/uttori/uttori-plugin-vm-random-documents.svg?branch=master)](https://travis-ci.com/uttori/uttori-plugin-vm-random-documents)
 [![Dependency Status](https://david-dm.org/uttori/uttori-plugin-vm-random-documents.svg)](https://david-dm.org/uttori/uttori-plugin-vm-random-documents)
 [![Coverage Status](https://coveralls.io/repos/uttori/uttori-plugin-vm-random-documents/badge.svg?branch=master)](https://coveralls.io/r/uttori/uttori-plugin-vm-random-documents?branch=master)
 
@@ -43,7 +43,7 @@ npm install --save @uttori/plugin-vm-random-documents
 ## ViewModelRandomDocuments
 Uttori View Model Enrichment - Random Documents
 
-**Kind**: global class  
+**Kind**: global class
 
 * [ViewModelRandomDocuments](#ViewModelRandomDocuments)
     * [.configKey](#ViewModelRandomDocuments.configKey) ⇒ <code>string</code>
@@ -57,9 +57,9 @@ Uttori View Model Enrichment - Random Documents
 ### ViewModelRandomDocuments.configKey ⇒ <code>string</code>
 The configuration key for plugin to look for in the provided configuration.
 
-**Kind**: static property of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)  
-**Returns**: <code>string</code> - The configuration key.  
-**Example** *(ViewModelRandomDocuments.configKey)*  
+**Kind**: static property of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)
+**Returns**: <code>string</code> - The configuration key.
+**Example** *(ViewModelRandomDocuments.configKey)*
 ```js
 const config = { ...ViewModelRandomDocuments.defaultConfig(), ...context.config[ViewModelRandomDocuments.configKey] };
 ```
@@ -68,9 +68,9 @@ const config = { ...ViewModelRandomDocuments.defaultConfig(), ...context.config[
 ### ViewModelRandomDocuments.defaultConfig() ⇒ <code>object</code>
 The default configuration.
 
-**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)  
-**Returns**: <code>object</code> - The configuration.  
-**Example** *(ViewModelRandomDocuments.defaultConfig())*  
+**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)
+**Returns**: <code>object</code> - The configuration.
+**Example** *(ViewModelRandomDocuments.defaultConfig())*
 ```js
 const config = { ...ViewModelRandomDocuments.defaultConfig(), ...context.config[ViewModelRandomDocuments.configKey] };
 ```
@@ -79,7 +79,7 @@ const config = { ...ViewModelRandomDocuments.defaultConfig(), ...context.config[
 ### ViewModelRandomDocuments.validateConfig(config, _context)
 Validates the provided configuration for required entries.
 
-**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)  
+**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -89,7 +89,7 @@ Validates the provided configuration for required entries.
 | config.configKey.limit | <code>string</code> | The maximum number of documents to be returned. |
 | _context | <code>object</code> | A Uttori-like context (unused). |
 
-**Example** *(ViewModelRandomDocuments.validateConfig(config, _context))*  
+**Example** *(ViewModelRandomDocuments.validateConfig(config, _context))*
 ```js
 ViewModelRandomDocuments.validateConfig({ ... });
 ```
@@ -98,7 +98,7 @@ ViewModelRandomDocuments.validateConfig({ ... });
 ### ViewModelRandomDocuments.register(context)
 Register the plugin with a provided set of events on a provided Hook system.
 
-**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)  
+**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ Register the plugin with a provided set of events on a provided Hook system.
 | context.hooks | <code>object</code> | An event system / hook system to use. |
 | context.hooks.on | <code>function</code> | An event registration function. |
 
-**Example** *(ViewModelRandomDocuments.register(context))*  
+**Example** *(ViewModelRandomDocuments.register(context))*
 ```js
 const context = {
   config: {
@@ -131,8 +131,8 @@ ViewModelRandomDocuments.register(context);
 ### ViewModelRandomDocuments.callback(viewModel, context) ⇒ <code>Promise.&lt;object&gt;</code>
 Queries for random documents and searches the storage provider.
 
-**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)  
-**Returns**: <code>Promise.&lt;object&gt;</code> - The provided view-model document.  
+**Kind**: static method of [<code>ViewModelRandomDocuments</code>](#ViewModelRandomDocuments)
+**Returns**: <code>Promise.&lt;object&gt;</code> - The provided view-model document.
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -146,7 +146,7 @@ Queries for random documents and searches the storage provider.
 | context.hooks.on | <code>function</code> | An event registration function. |
 | context.hooks.fetch | <code>function</code> | An event dispatch function that returns an array of results. |
 
-**Example** *(ViewModelRandomDocuments.callback(viewModel, context))*  
+**Example** *(ViewModelRandomDocuments.callback(viewModel, context))*
 ```js
 const context = {
   config: {

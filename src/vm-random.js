@@ -1,4 +1,4 @@
-const debug = require('debug')('Uttori.Plugin.ViewModel.RandomDocuments');
+let debug = () => {}; try { debug = require('debug')('Uttori.Plugin.ViewModel.RandomDocuments'); } catch {}
 
 /**
  * Uttori View Model Enrichment - Random Documents
